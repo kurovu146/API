@@ -22,6 +22,13 @@ export const databaseProviders = [
           password: process.env.POSTGRES_PASSWORD,
           database: process.env.POSTGRES_DATABASE,
           logging: true,
+          ssl: true, // Bật chế độ SSL/TLS
+          dialectOptions: {
+            ssl: {
+              require: true // Yêu cầu kết nối SSL/TLS bảo mật
+              // Bạn cũng có thể cung cấp các tùy chọn SSL khác tại đây nếu cần
+            }
+          }
         }
       );
       sequelize.addModels(models);
