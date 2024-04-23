@@ -11,7 +11,6 @@ import { AuthModule } from './module/auth/auth.module';
 import { MailModule } from 'src/shared/mail/mail.module';
 import { QuestionModule } from './module/question/question.module';
 import { ViewModule } from './module/view/view.module';
-import { ChatGPTModule } from './module/chatGPT/chatGPT.module';
 
 @Module({
   imports: [
@@ -24,8 +23,7 @@ import { ChatGPTModule } from './module/chatGPT/chatGPT.module';
     AuthModule,
     MailModule,
     QuestionModule,
-    ViewModule,
-    ChatGPTModule
+    ViewModule
   ],
   controllers: [AppController],
   providers: [AppService],
